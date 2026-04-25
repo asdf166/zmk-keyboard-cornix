@@ -90,6 +90,16 @@
             key-positions = <6 18>;
             layers = <2>;
         };
+
+        up_2 {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <47 49>;
+        };
+
+        up_1 {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <38 40>;
+        };
     };
 
     keymap {
@@ -106,10 +116,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&mt LEFT_WIN ESCAPE  &kp Q                                         &kp W      &kp E         &kp R        &kp T                        &kp Y  &kp U      &kp I            &kp O      &kp P                                     &kp SEMICOLON
-&mo 1                &kp A                                         &kp S      &kp D         &kp F        &kp G                        &kp H  &kp J      &kp K            &kp L      &space_cadet RSHFT RS(RIGHT_PARENTHESIS)  &kp APOSTROPHE
-&mt LCTRL TAB        &space_cadet LEFT_SHIFT LS(LEFT_PARENTHESIS)  &kp Z      &kp X         &kp C        &kp V          &none  &none  &kp B  &kp N      &kp M            &kp COMMA  &kp PERIOD                                &kp SLASH
-&kp LEFT             &kp DOWN                                      &kp RIGHT  &kp LEFT_ALT  &lt 2 ENTER  &kp BACKSPACE                &mo 3  &kp SPACE  &lt 2 BACKSPACE  &kp LEFT   &kp DOWN                                  &kp RIGHT
+&mt LEFT_WIN ESCAPE  &kp Q                                         &kp W      &kp E         &kp R        &kp T                        &kp Y  &kp U      &kp I                  &kp O      &kp P                                     &kp SEMICOLON
+&mo 1                &kp A                                         &kp S      &kp D         &kp F        &kp G                        &kp H  &kp J      &kp K                  &kp L      &space_cadet RSHFT RS(RIGHT_PARENTHESIS)  &kp APOSTROPHE
+&mt LCTRL TAB        &space_cadet LEFT_SHIFT LS(LEFT_PARENTHESIS)  &kp Z      &kp X         &kp C        &kp V          &none  &none  &kp B  &kp N      &kp M                  &kp COMMA  &kp PERIOD                                &kp SLASH
+&kp LEFT             &kp DOWN                                      &kp RIGHT  &kp LEFT_ALT  &lt 2 ENTER  &kp BACKSPACE                &mo 3  &kp SPACE  &kp LC(LA(PAGE_DOWN))  &kp LEFT   &kp DOWN                                  &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -158,10 +168,10 @@
 
         System {
             bindings = <
-&trans      &trans        &trans        &trans        &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &kp F1        &kp F2        &kp F3        &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans                  &trans  &trans  &trans  &trans  &trans   &kp F12
+&trans      &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans      &trans        &trans        &trans        &trans  &trans                  &trans  &trans  &trans  &trans  &trans   &trans
             >;
         };
     };
