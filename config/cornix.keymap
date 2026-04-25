@@ -133,6 +133,16 @@
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <200>;
         };
+
+        space_cadet: space_cadet {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE_CADET";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+        };
     };
 
     conditional_layers {
@@ -190,10 +200,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&mt LEFT_WIN ESCAPE  &kp Q           &kp W  &kp E         &kp R        &kp T                        &kp Y      &kp U                &kp I            &kp O         &kp P             &kp BSLH
-&mo 1                &kp A           &kp S  &kp D         &kp F        &kp G                        &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K     &hm_r RALT L  &hm_r RCTRL SEMI  &kp SQT
-&mt LCTRL TAB        &kp LEFT_SHIFT  &kp Z  &kp X         &kp C        &kp V          &none  &none  &kp B      &kp N                &kp M            &kp COMMA     &kp PERIOD        &kp BACKSPACE
-&none                &none           &none  &lt 6 ESCAPE  &lt 2 ENTER  &kp BACKSPACE                &kp ENTER  &kp SPACE            &lt 2 BACKSPACE  &none         &none             &none
+&mt LEFT_WIN ESCAPE  &kp Q                                         &kp W  &kp E         &kp R        &kp T                        &kp Y      &kp U                &kp I            &kp O         &kp P                                     &kp SEMICOLON
+&mo 1                &kp A                                         &kp S  &kp D         &kp F        &kp G                        &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K     &hm_r RALT L  &space_cadet RSHFT RS(RIGHT_PARENTHESIS)  &kp APOSTROPHE
+&mt LCTRL TAB        &space_cadet LEFT_SHIFT LS(LEFT_PARENTHESIS)  &kp Z  &kp X         &kp C        &kp V          &none  &none  &kp B      &kp N                &kp M            &kp COMMA     &kp PERIOD                                &kp SLASH
+&none                &none                                         &none  &lt 6 ESCAPE  &lt 2 ENTER  &kp BACKSPACE                &kp ENTER  &kp SPACE            &lt 2 BACKSPACE  &none         &none                                     &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
