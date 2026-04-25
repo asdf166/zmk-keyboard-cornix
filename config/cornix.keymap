@@ -126,10 +126,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&trans  &kp LC(T)      &kp LC(W)     &kp F19  &kp F5      &kp F17                  &trans     &trans    &trans    &trans     &trans  &trans
-&trans  &kp LC(LS(T))  &kp F14       &kp DEL  &kp LA(F4)  &kp F18                  &kp MINUS  &kp LEFT  &kp DOWN  &kp RIGHT  &kp UP  &kp UNDERSCORE
-&trans  &trans         &kp LA(HOME)  &trans   &trans      &trans   &trans  &trans  &trans     &trans    &trans    &trans     &trans  &trans
-&none   &none          &none         &trans   &kp F21     &trans                   &trans     &trans    &trans    &none      &none   &none
+&trans  &kp LC(T)      &kp LC(W)     &kp F19  &kp F5      &kp F17                        &trans     &kp LC(HOME)  &kp LC(LEFT)  &kp LC(RIGHT)  &kp LC(END)  &kp LC(LS(LEFT))
+&trans  &kp LC(LS(T))  &kp F14       &kp DEL  &kp LA(F4)  &kp F18                        &kp MINUS  &kp LEFT      &kp DOWN      &kp RIGHT      &kp UP       &kp UNDERSCORE
+&trans  &trans         &kp LA(HOME)  &trans   &trans      &kp LS(LG(S))  &trans  &trans  &trans     &kp HOME      &kp PG_UP     &kp PAGE_DOWN  &kp END      &trans
+&none   &none          &none         &trans   &kp F21     &trans                         &trans     &trans        &trans        &none          &none        &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
