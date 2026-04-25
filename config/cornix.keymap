@@ -143,6 +143,13 @@
             tapping-term-ms = <200>;
             hold-while-undecided;
         };
+
+        volume_knob: volume_knob {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "VOLUME_KNOB";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOLUME_UP>, <&kp C_VOLUME_DOWN>;
+        };
     };
 
     conditional_layers {
