@@ -73,13 +73,6 @@
             tapping-term-ms = <200>;
             hold-while-undecided;
         };
-
-        volume: volume {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "VOLUME";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_VOLUME_UP>, <&kp C_VOLUME_DOWN>;
-        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
