@@ -73,6 +73,16 @@
             tapping-term-ms = <200>;
             hold-while-undecided;
         };
+
+        ctrl_holdtap: ctrl_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CTRL_HOLDTAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -116,10 +126,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&mt LEFT_WIN ESCAPE  &kp Q                                         &kp W      &kp E         &kp R        &kp T                        &kp Y  &kp U      &kp I                  &kp O      &kp P                                     &kp SEMICOLON
-&mo 1                &kp A                                         &kp S      &kp D         &kp F        &kp G                        &kp H  &kp J      &kp K                  &kp L      &space_cadet RSHFT RS(RIGHT_PARENTHESIS)  &kp APOSTROPHE
-&mt LCTRL TAB        &space_cadet LEFT_SHIFT LS(LEFT_PARENTHESIS)  &kp Z      &kp X         &kp C        &kp V          &none  &none  &kp B  &kp N      &kp M                  &kp COMMA  &kp PERIOD                                &kp SLASH
-&kp LEFT             &kp DOWN                                      &kp RIGHT  &kp LEFT_ALT  &lt 2 ENTER  &kp BACKSPACE                &mo 3  &kp SPACE  &kp LC(LA(PAGE_DOWN))  &kp LEFT   &kp DOWN                                  &kp RIGHT
+&mt LEFT_WIN ESCAPE      &kp Q                                         &kp W      &kp E         &kp R        &kp T                        &kp Y  &kp U      &kp I                  &kp O      &kp P                                     &kp SEMICOLON
+&mo 1                    &kp A                                         &kp S      &kp D         &kp F        &kp G                        &kp H  &kp J      &kp K                  &kp L      &space_cadet RSHFT RS(RIGHT_PARENTHESIS)  &kp APOSTROPHE
+&ctrl_holdtap LCTRL TAB  &space_cadet LEFT_SHIFT LS(LEFT_PARENTHESIS)  &kp Z      &kp X         &kp C        &kp V          &none  &none  &kp B  &kp N      &kp M                  &kp COMMA  &kp PERIOD                                &kp SLASH
+&kp LEFT                 &kp DOWN                                      &kp RIGHT  &kp LEFT_ALT  &lt 2 ENTER  &kp BACKSPACE                &mo 3  &kp SPACE  &kp LC(LA(PAGE_DOWN))  &kp LEFT   &kp DOWN                                  &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
