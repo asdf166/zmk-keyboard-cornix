@@ -1,5 +1,7 @@
 # ZMK Keyboard for Cornix
 
+(연결 문제 때문에 config/cornix.conf 임의 생성한 버전임)
+
 ## Introduction to Boards and Shields
 
 This repository contains the ZMK firmware configuration for the Cornix split keyboard. Below is an explanation of the different boards and shields available in this project:
