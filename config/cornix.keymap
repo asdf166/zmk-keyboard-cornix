@@ -93,6 +93,7 @@
         haneng {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <15 16>;
+            slow-release;
         };
 
         equal {
