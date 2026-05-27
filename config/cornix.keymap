@@ -90,12 +90,6 @@
     combos {
         compatible = "zmk,combos";
 
-        haneng {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <15 16>;
-            slow-release;
-        };
-
         equal {
             bindings = <&kp EQUAL>;
             key-positions = <6 18>;
