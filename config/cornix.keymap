@@ -106,7 +106,7 @@
             key-positions = <38 40>;
         };
 
-        haneng_jk {
+        haneng_jk_ {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <19 20>;
             layers = <0>;
