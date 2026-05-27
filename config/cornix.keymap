@@ -105,6 +105,11 @@
             bindings = <&kp UP_ARROW>;
             key-positions = <38 40>;
         };
+
+        haneng_jk {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <19 20>;
+        };
     };
 
     keymap {
